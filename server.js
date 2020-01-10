@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 require('dotenv').config();
-
-
-
+require('./lib/utils/connect')();
 const app = require('./lib/app');
+const PORT = process.env.PORT || 7890;
 
 
-const config = require('./config');
-const db = require('./config/database');
-
-app.listen(config.port, console.log('Server started on http://localhost:%s', config.port));
+app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Started on ${PORT}`);
+});

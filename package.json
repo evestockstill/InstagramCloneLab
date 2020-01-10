@@ -1,10 +1,13 @@
 {
-  "name": "instagram",
+  "name": "InstagramCloneLab",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "test": "jest --verbose --runInBand",
+    "test": "jest --verbose --runInBand --detectOpenHandles",
     "test:watch": "npm run test -- --watch",
     "start": "node server.js",
     "start:watch": "nodemon server.js"
@@ -12,22 +15,27 @@
   "jest": {
     "testEnvironment": "node"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evestockstill/InstagramCloneLab.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/jest": "^24.0.25",
-    "eslint": "^6.8.0",
-    "jest": "^24.9.0",
-    "nodemon": "^2.0.2",
-    "supertest": "^4.0.2"
+  "bugs": {
+    "url": "https://github.com/evestockstill/InstagramCloneLab/issues"
   },
+  "homepage": "https://github.com/evestockstill/InstagramCloneLab#readme",
   "dependencies": {
     "bcrypt": "^3.0.7",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jest": "^24.9.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
